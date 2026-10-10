@@ -9,6 +9,7 @@ export const FALLBACK_PORTFOLIO = {
     location: "Pune, India",
     years_of_experience: 0,
     projects_completed: 12,
+    resume: "/Rushikesh_Lale_Resume.pdf",
   },
   skills: [
     { id: 1, name: "React.js", category: "frontend", category_display: "Frontend", proficiency: 92, icon_name: "Code2" },
