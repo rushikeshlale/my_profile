@@ -177,18 +177,14 @@ export default function ContactSection({ profile, socialLinks = [], onShowToast 
                       View My GitHub
                     </Button>
 
-                    <Button
-                      onClick={handleDownloadResume}
-                      href={profile?.resume || undefined}
-                      download={profile?.resume ? true : undefined}
-                      target={profile?.resume ? '_blank' : undefined}
-                      variant="secondary"
-                      size="md"
-                      icon={Download}
-                      iconPosition="left"
+                    <a
+                      href={profile?.resume || "/Rushikesh_Lale_Resume.pdf"}
+                      download="Rushikesh_Lale_Resume.pdf"
+                      className="inline-flex items-center justify-center font-medium rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 active:scale-95 px-5 py-2.5 text-sm gap-2 bg-slate-200 hover:bg-slate-300 text-slate-800 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-slate-200 border border-slate-300 dark:border-slate-700 shadow-sm"
                     >
-                      Download Resume
-                    </Button>
+                      <Download className="w-4 h-4" />
+                      <span>Download Resume</span>
+                    </a>
                   </div>
                 </div>
               </div>

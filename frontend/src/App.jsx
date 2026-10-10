@@ -29,8 +29,12 @@ function App() {
       try {
         const res = await portfolioService.getOverview();
         if (res) {
+          const profileData = res.profile || FALLBACK_PORTFOLIO.profile;
+          if (!profileData.resume) {
+            profileData.resume = FALLBACK_PORTFOLIO.profile.resume || '/Rushikesh_Lale_Resume.pdf';
+          }
           setData({
-            profile: res.profile || FALLBACK_PORTFOLIO.profile,
+            profile: profileData,
             skills: res.skills && res.skills.length > 0 ? res.skills : FALLBACK_PORTFOLIO.skills,
             projects: res.projects && res.projects.length > 0 ? res.projects : FALLBACK_PORTFOLIO.projects,
             experiences: res.experiences && res.experiences.length > 0 ? res.experiences : FALLBACK_PORTFOLIO.experiences,
