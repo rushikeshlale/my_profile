@@ -68,7 +68,7 @@ export default function ResumeModal({ isOpen, onClose, resumeUrl = '/Rushikesh_L
         {/* PDF Viewer Body */}
         <div className="flex-1 w-full bg-slate-100 dark:bg-slate-950 overflow-hidden relative">
           <iframe
-            src={`${resumeUrl}#toolbar=0&navpanes=0`}
+            src={`${resumeUrl}#page=1&view=FitH&toolbar=0&navpanes=0`}
             title="Rushikesh Lale Resume"
             className="w-full h-full border-0"
           />
