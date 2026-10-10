@@ -65,29 +65,16 @@ export default function ResumeModal({ isOpen, onClose, resumeUrl = '/Rushikesh_L
           </div>
         </div>
 
-        {/* PDF Viewer Body */}
-        <div className="flex-1 w-full bg-slate-100 dark:bg-slate-950 overflow-hidden relative">
-          <iframe
-            src={`${resumeUrl}#page=1&view=FitH&toolbar=0&navpanes=0`}
-            title="Rushikesh Lale Resume"
-            className="w-full h-full border-0"
-          />
-
-          {/* Fallback overlay for browsers that block iframe PDF rendering */}
-          <noscript>
-            <div className="p-8 text-center">
-              <p className="text-sm text-slate-700 dark:text-slate-300 mb-4">
-                Your browser does not support inline PDF viewing.
-              </p>
-              <a
-                href={resumeUrl}
-                download="Rushikesh_Lale_Resume.pdf"
-                className="px-4 py-2 bg-indigo-600 text-white rounded-xl"
-              >
-                Download Resume PDF
-              </a>
-            </div>
-          </noscript>
+        {/* Resume Page 1 Viewer Body - Strictly 1 Page (Zero extra blank page) */}
+        <div className="flex-1 w-full bg-slate-200/60 dark:bg-slate-950 overflow-y-auto p-3 sm:p-6 flex justify-center items-start">
+          <div className="relative max-w-2xl w-full bg-white shadow-2xl rounded-lg overflow-hidden border border-slate-300 dark:border-slate-800">
+            <img
+              src="/images/resume_preview.png"
+              alt="Rushikesh Laxman Lale Resume - Page 1"
+              className="w-full h-auto block select-none"
+              loading="eager"
+            />
+          </div>
         </div>
 
         {/* Bottom Quick Contact Bar */}
